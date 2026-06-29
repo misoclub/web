@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | misoclub</title>
+    <meta name="description" content="misoclub へのお問い合わせ窓口です。" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <div class="container">
+        <a href="./index.html" class="brand">misoclub</a>
+        <nav class="nav">
+          <a href="./index.html#apps">アプリ</a>
+          <a href="./index.html#about">私たちについて</a>
+          <a href="./contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <h1>お問い合わせ</h1>
+      <p>
+        misoclub およびアプリに関するお問い合わせは、以下のメールアドレスまでお願いします。
+      </p>
+
+      <h2>メールでのお問い合わせ</h2>
+      <p>
+        <a
+          href="mailto:misoclubsupport@gmail.com?subject=%5Bmisoclub%5D%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B"
+          class="btn"
+          >メールを送る</a
+        >
+      </p>
+      <p class="updated">宛先: <strong>misoclubsupport@gmail.com</strong></p>
+
+      <h2>お問い合わせの前に</h2>
+      <ul>
+        <li>アプリ名と、お使いの端末・OSバージョンを記載いただけるとスムーズです。</li>
+        <li>返信までに数日いただく場合があります。</li>
+      </ul>
+
+      <!--
+        将来フォームを設置する場合のメモ:
+        - Google フォーム / Formspree などに <iframe> または <form action> を差し込めば
+          GitHub Pages（静的）のままでも実送信が可能です。
+      -->
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="container">
+        <nav>
+          <a href="./index.html">ホーム</a>
+          <a href="./contact.html">お問い合わせ</a>
+        </nav>
+        <p>&copy; <span id="year"></span> misoclub</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

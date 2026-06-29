@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>misoclub</title>
+    <meta name="description" content="misoclub は〇〇なアプリをつくるチームです。" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <div class="container">
+        <a href="./index.html" class="brand">misoclub</a>
+        <nav class="nav">
+          <a href="#apps">アプリ</a>
+          <a href="#about">私たちについて</a>
+          <a href="./contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="container">
+        <h1>misoclub</h1>
+        <p>
+          ここにキャッチコピーが入ります。<br />
+          misoclub がつくるアプリやサービスを紹介するランディングページです。
+        </p>
+        <a href="#apps" class="btn">アプリを見る</a>
+      </div>
+    </section>
+
+    <!-- アプリ一覧 -->
+    <section id="apps">
+      <div class="container">
+        <h2 class="section-title">アプリ</h2>
+        <p class="section-lead">misoclub がリリースしているアプリ。</p>
+
+        <div class="app-grid">
+          <!-- アプリを増やすときはこのカードを複製してください -->
+          <div class="app-card">
+            <h3>日本旅日記</h3>
+            <p>旅の行き先・日程・写真・メモを、端末内だけに記録できる旅日記アプリ。</p>
+            <a href="./privacy/nihon-tabinikki.html">プライバシーポリシー</a>
+          </div>
+
+          <div class="app-card">
+            <h3>メモリア 〜たいせつな日のカウントダウン〜</h3>
+            <p>記念日や大切な日までの日数を、絵文字や通知とともにカウントダウン。</p>
+            <a href="./privacy/memoria.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 私たちについて -->
+    <section id="about" style="background: #fff6ea">
+      <div class="container">
+        <h2 class="section-title">私たちについて</h2>
+        <p class="section-lead">
+          misoclub がどんなチームか、何を大切にしているかをここに書きます。
+        </p>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="container">
+        <nav>
+          <a href="./index.html">ホーム</a>
+          <a href="./contact.html">お問い合わせ</a>
+        </nav>
+        <p>&copy; <span id="year"></span> misoclub</p>
+      </div>
+    </footer>
+
+    <script>
+      // フッターの年号を自動更新
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -119,7 +119,7 @@ section {
 /* ---------- ヒーロー ---------- */
 .hero {
   text-align: center;
-  padding: 96px 0 80px;
+  padding: 80px 0 40px;
   background: linear-gradient(180deg, #fff6ea 0%, var(--color-bg) 100%);
 }
 .hero h1 {
@@ -131,7 +131,7 @@ section {
   font-size: 1.1rem;
   color: var(--color-muted);
   max-width: 620px;
-  margin: 0 auto 32px;
+  margin: 0 auto; /* 末尾要素なので下マージンは持たせない */
 }
 
 /* ---------- ボタン ---------- */
@@ -241,15 +241,28 @@ section {
   height: 42px;
 }
 
-/* カード全体をリンクにしたタイプ（トップページ用・DLページへ遷移） */
-.app-card-link {
-  text-decoration: none;
-  color: inherit;
+/* リンク付きカード（トップページ用）
+   ・カード本体（.app-card-link）= 個別DLページへの主リンク
+   ・右上の .app-privacy = プライバシーポリシーへのアイコンリンク */
+.app-card--link {
+  position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.app-card-link:hover {
+.app-card--link:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+.app-card-link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+  padding-right: 22px; /* 右上のプライバシーアイコンと文字が重ならないように */
+  text-decoration: none;
+  color: inherit;
+}
+.app-card-link:hover {
   text-decoration: none;
 }
 .app-cta {
@@ -257,6 +270,23 @@ section {
   color: var(--color-accent-dark);
   font-weight: 600;
   font-size: 0.95rem;
+}
+/* プライバシーポリシーのアイコンリンク（リンク取得用・文字なし） */
+.app-privacy {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--color-muted);
+}
+.app-privacy:hover {
+  color: var(--color-accent-dark);
+  background: var(--color-border);
 }
 
 /* ---------- 本文ページ（プライバシー等） ---------- */
@@ -379,7 +409,7 @@ section {
 
   /* ヒーロー */
   .hero {
-    padding: 64px 0 56px;
+    padding: 44px 0 24px;
   }
   .hero h1 {
     font-size: 1.9rem;
@@ -450,11 +480,16 @@ section {
 /* 狭い画面：リッチカードはアイコンを上にした縦並びに切り替え
    （それより広い画面ではアイコンと情報は横並びを維持） */
 @media (max-width: 480px) {
-  .app-list .app-card {
+  .app-list .app-card,
+  .app-card-link {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 14px;
+  }
+  /* リンクカードは中央寄せ時にアイコン分の右パディングを解除 */
+  .app-card-link {
+    padding-right: 0;
   }
   /* flex 縦並びで子が内容幅にならないよう全幅にする */
   .app-info {

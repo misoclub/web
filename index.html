@@ -15,7 +15,7 @@
     <meta property="og:image" content="./assets/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>misoclub</title>
-    <meta name="description" content="misoclub は〇〇なアプリをつくるチームです。" />
+    <meta name="description" content="misoclub（みそくらぶ）は、個人で制作したアプリやツールを公開しています。" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -33,8 +33,8 @@
       <div class="container">
         <h1>misoclub</h1>
         <p>
-          ここにキャッチコピーが入ります。<br />
-          misoclub がつくるアプリやサービスを紹介するランディングページです。
+          misoclub（みそくらぶ）は、個人で制作したアプリやツールを公開しています。<br />
+          毎日をちょっと便利に、ちょっと楽しくする。そんなものづくりを続けています。
         </p>
       </div>
     </section>
@@ -46,35 +46,69 @@
         <p class="section-lead">misoclub がリリースしているアプリ。</p>
 
         <div class="app-list">
-          <a class="app-card app-card-link" href="./apps/nihon-tabinikki/index.html">
-            <img
-              class="app-icon"
-              src="./apps/nihon-tabinikki/icon.png"
-              alt="日本旅日記 アイコン"
-              width="96"
-              height="96"
-            />
-            <div class="app-info">
-              <h3>日本旅日記</h3>
-              <p>旅の行き先・日程・写真・メモを、端末内だけに記録できる旅日記アプリ。</p>
-              <span class="app-cta">ダウンロード →</span>
-            </div>
-          </a>
+          <!--
+            ・カード本体（app-card-link）→ 各アプリの個別DLページ
+            ・右上のアイコン（app-privacy）→ プライバシーポリシー（リンク取得用）
+          -->
+          <div class="app-card app-card--link">
+            <a class="app-card-link" href="./apps/nihon-tabinikki/index.html">
+              <img
+                class="app-icon"
+                src="./apps/nihon-tabinikki/icon.png"
+                alt="日本旅日記 アイコン"
+                width="96"
+                height="96"
+              />
+              <div class="app-info">
+                <h3>日本旅日記</h3>
+                <p>旅の行き先・日程・写真・メモを、端末内だけに記録できる旅日記アプリ。</p>
+                <span class="app-cta">ダウンロード →</span>
+              </div>
+            </a>
+            <a
+              class="app-privacy"
+              href="./apps/nihon-tabinikki/privacy.html"
+              target="_blank"
+              rel="noopener"
+              title="プライバシーポリシー"
+              aria-label="日本旅日記 のプライバシーポリシー"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </a>
+          </div>
 
-          <a class="app-card app-card-link" href="./apps/memoria/index.html">
-            <img
-              class="app-icon"
-              src="./apps/memoria/icon.png"
-              alt="メモリア アイコン"
-              width="96"
-              height="96"
-            />
-            <div class="app-info">
-              <h3>メモリア 〜たいせつな日のカウントダウン〜</h3>
-              <p>記念日や大切な日までの日数を、絵文字や通知とともにカウントダウン。</p>
-              <span class="app-cta">ダウンロード →</span>
-            </div>
-          </a>
+          <div class="app-card app-card--link">
+            <a class="app-card-link" href="./apps/memoria/index.html">
+              <img
+                class="app-icon"
+                src="./apps/memoria/icon.png"
+                alt="メモリア アイコン"
+                width="96"
+                height="96"
+              />
+              <div class="app-info">
+                <h3>メモリア 〜たいせつな日のカウントダウン〜</h3>
+                <p>記念日や大切な日までの日数を、絵文字や通知とともにカウントダウン。</p>
+                <span class="app-cta">ダウンロード →</span>
+              </div>
+            </a>
+            <a
+              class="app-privacy"
+              href="./apps/memoria/privacy.html"
+              target="_blank"
+              rel="noopener"
+              title="プライバシーポリシー"
+              aria-label="メモリア のプライバシーポリシー"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <p style="text-align: center; margin-top: 32px">

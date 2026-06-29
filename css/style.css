@@ -206,7 +206,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 720px;
+  max-width: 860px;
   margin: 0 auto;
 }
 .app-list .app-card {
@@ -289,11 +289,12 @@ section {
   gap: 16px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 常に横並び（折り返さない） */
 }
 .store-badges a {
   display: block;
   line-height: 0;
+  flex-shrink: 0;
 }
 /* 高さをそろえる。アスペクト比が違うため幅は自動 */
 .store-badges img {
@@ -378,23 +379,10 @@ section {
     padding: 22px;
   }
 
-  /* アプリ一覧のリッチカード：アイコンを上に、中央寄せ */
-  .app-list .app-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 14px;
-  }
-  /* flex 縦並びで子が内容幅にならないよう全幅にして折り返させる */
-  .app-info {
-    width: 100%;
-  }
+  /* リッチカード：アイコンはやや小さめ（横並びは維持） */
   .app-icon {
     width: 84px;
     height: 84px;
-  }
-  .app-card .store-badges {
-    justify-content: center;
   }
 
   /* ボタンはタップしやすいよう大きめ＆幅広に */
@@ -432,6 +420,24 @@ section {
   .dl-logo {
     height: 34px;
     margin-bottom: 32px;
+  }
+}
+
+/* 狭い画面：リッチカードはアイコンを上にした縦並びに切り替え
+   （それより広い画面ではアイコンと情報は横並びを維持） */
+@media (max-width: 480px) {
+  .app-list .app-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+  /* flex 縦並びで子が内容幅にならないよう全幅にする */
+  .app-info {
+    width: 100%;
+  }
+  .app-card .store-badges {
+    justify-content: center;
   }
 }
 

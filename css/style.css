@@ -239,7 +239,7 @@ section {
   color: var(--color-muted);
 }
 
-/* ---------- ストアバッジ ---------- */
+/* ---------- ストアバッジ（App Store / Google Play 公式バッジ） ---------- */
 .store-badges {
   display: flex;
   gap: 16px;
@@ -247,45 +247,15 @@ section {
   align-items: center;
   flex-wrap: wrap;
 }
-/* バッジの高さをそろえる基準。Google Play バッジ画像もこの高さに合わせる */
-.store-badges .google-play img {
-  height: 58px;
+.store-badges a {
   display: block;
+  line-height: 0;
 }
-/* App Store バッジ（Apple 公式バッジ画像が用意できるまでの自作バッジ） */
-.appstore-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  height: 58px;
-  padding: 0 18px;
-  background: #000;
-  border: 1px solid #a6a6a6;
-  border-radius: 11px;
-  color: #fff;
-  box-sizing: border-box;
-}
-.appstore-badge:hover {
-  text-decoration: none;
-  opacity: 0.85;
-}
-.appstore-badge svg {
-  width: 26px;
-  height: 26px;
-  fill: #fff;
-  flex-shrink: 0;
-}
-.appstore-badge .l1 {
+/* 高さをそろえる。アスペクト比が違うため幅は自動 */
+.store-badges img {
+  height: 52px;
+  width: auto;
   display: block;
-  font-size: 11px;
-  line-height: 1.1;
-}
-.appstore-badge .l2 {
-  display: block;
-  font-size: 19px;
-  line-height: 1.15;
-  font-weight: 600;
-  letter-spacing: 0.01em;
 }
 
 /* ---------- ダウンロードページ（アプリからのシェア用） ---------- */
@@ -380,28 +350,13 @@ section {
     font-size: 1.15rem;
   }
 
-  /* ストアバッジ：縦積み・横いっぱいでタップしやすく */
+  /* ストアバッジ：縦積み・中央寄せでタップしやすく */
   .store-badges {
     flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 16px;
   }
-  .store-badges .google-play,
-  .appstore-badge {
-    width: 100%;
-  }
-  .store-badges .google-play img {
-    height: auto;
-    width: 100%;
-    max-width: 260px;
-    margin: 0 auto;
-  }
-  .appstore-badge {
-    justify-content: center;
-    height: 60px;
+  .store-badges img {
+    height: 56px;
   }
 
   /* ダウンロードページ */

@@ -258,7 +258,7 @@ section {
   gap: 24px;
   flex: 1;
   min-width: 0;
-  padding-right: 22px; /* 右上のプライバシーアイコンと文字が重ならないように */
+  padding-right: 80px; /* 右上のプライバシー（🔒 JA/EN）と文字が重ならないように */
   text-decoration: none;
   color: inherit;
 }
@@ -271,20 +271,30 @@ section {
   font-weight: 600;
   font-size: 0.95rem;
 }
-/* プライバシーポリシーのアイコンリンク（リンク取得用・文字なし） */
+/* プライバシーポリシー（右上）: 🔒 + JA/EN の言語別リンク（リンク取得用） */
 .app-privacy {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 12px;
+  right: 12px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  gap: 5px;
   color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
-.app-privacy:hover {
+.app-privacy svg {
+  flex-shrink: 0;
+}
+.app-privacy a {
+  color: var(--color-muted);
+  text-decoration: none;
+  padding: 2px 5px;
+  border-radius: 5px;
+  line-height: 1;
+}
+.app-privacy a:hover {
   color: var(--color-accent-dark);
   background: var(--color-border);
 }

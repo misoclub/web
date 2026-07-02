@@ -103,7 +103,7 @@ section {
   text-decoration: none;
 }
 .brand-logo {
-  height: 30px;
+  height: 46px;
   display: block;
 }
 .nav a {
@@ -410,7 +410,7 @@ section {
 
   /* ヘッダー：ロゴとナビを詰めて 1 行に収める */
   .brand-logo {
-    height: 26px;
+    height: 40px;
   }
   .nav a {
     margin-left: 14px;
@@ -520,7 +520,7 @@ section {
     font-size: 0.74rem;
   }
   .brand-logo {
-    height: 22px;
+    height: 34px;
   }
   .store-badges img {
     height: 38px;
